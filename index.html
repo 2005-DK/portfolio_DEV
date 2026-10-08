@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lydie Grâce KONANRI — étudiante en informatique, développeuse web et passionnée d'intelligence artificielle.">
+    <meta name="theme-color" content="#0b0b0d">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://konanrilydiegrace-jpg.github.io/">
+    <meta property="og:title" content="Lydie Grâce KONANRI — Développeuse Web & IA">
+    <meta property="og:description" content="Étudiante en informatique passionnée par le développement web et l'intelligence artificielle. Découvrez mes projets et contactez-moi.">
+    <meta property="og:locale" content="fr_FR">
+    <title>Lydie Grâce KONANRI — Développeuse Web & IA</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23ff5b2e'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Georgia' font-style='italic' font-size='34' fill='white'>L</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="STYLE.css">
+    <script>
+        try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+        document.documentElement.classList.add('js');
+    </script>
+</head>
+<body>
+
+    <!-- ===== ÉCRAN DE CHARGEMENT ===== -->
+    <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader-inner">
+            <span class="loader-name">Lydie Grâce <em>Konanri</em></span>
+            <span class="loader-count"><span id="loader-num">0</span>%</span>
+        </div>
+        <div class="loader-bar"><span id="loader-bar"></span></div>
+    </div>
+
+    <!-- Curseur personnalisé + barre de progression -->
+    <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-label" id="cursor-label"></span></div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ===== EN-TÊTE ===== -->
+    <header class="header" id="header">
+        <a href="#accueil" class="logo" aria-label="Accueil">
+            <span class="logo-mark">L<em>g</em></span>
+            <span class="logo-txt">Lydie Grâce<small>Développeuse Web & IA</small></span>
+        </a>
+
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="#apropos" class="nav-link"><span>À propos</span></a>
+            <a href="#expertise" class="nav-link"><span>Expertise</span></a>
+            <a href="#projets" class="nav-link"><span>Projets</span></a>
+            <a href="#methode" class="nav-link"><span>Méthode</span></a>
+        </nav>
+
+        <div class="header-right">
+            <button class="theme-btn" id="theme-toggle" aria-label="Changer de thème" data-cursor="Thème">
+                <span class="theme-knob"></span>
+            </button>
+            <a href="#contact" class="btn btn-light magnetic header-cta">
+                <span class="btn-dot"></span> Me contacter
+            </a>
+            <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menu mobile plein écran -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <nav>
+            <a href="#apropos"><small>01</small>À propos</a>
+            <a href="#expertise"><small>02</small>Expertise</a>
+            <a href="#projets"><small>03</small>Projets</a>
+            <a href="#methode"><small>04</small>Méthode</a>
+            <a href="#contact"><small>05</small>Contact</a>
+        </nav>
+        <div class="mobile-menu-foot">
+            <a href="mailto:konanrilydiegrace@gmail.com">konanrilydiegrace@gmail.com</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="accueil">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="hero-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+            <div class="wrap hero-top">
+                <div class="status reveal">
+                    <span class="pulse"></span>
+                    Disponible pour un stage — <span id="year-hero">2026</span>
+                </div>
+                <p class="hero-intro reveal">
+                    Étudiante en informatique, je conçois des <em>expériences web</em> claires,
+                    utiles et soignées — et j'explore le potentiel de l'<em>intelligence artificielle</em>.
+                </p>
+            </div>
+
+            <h1 class="hero-title" aria-label="Lydie Grâce Konanri, développeuse web et IA">
+                <span class="line"><span class="word">Lydie</span> <span class="word serif">Grâce</span></span>
+                <span class="line line-2">
+                    <span class="hero-photo" id="hero-photo" data-cursor="Bonjour 👋">
+                        <img src="image.jpg" alt="" id="avatar-img">
+                        <span class="photo-fallback">LG</span>
+                    </span>
+                    <span class="word">Konanri</span><span class="word accent">.</span>
+                </span>
+            </h1>
+
+            <div class="wrap hero-bottom">
+                <div class="hero-roles reveal">
+                    <span>Développement web</span>
+                    <span class="sep">✦</span>
+                    <span>Intelligence artificielle</span>
+                    <span class="sep">✦</span>
+                    <span>UI soignée</span>
+                </div>
+                <div class="hero-cta reveal">
+                    <a href="#projets" class="btn btn-accent magnetic" data-cursor="Voir">
+                        Découvrir mes projets
+                        <span class="btn-arrow"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+                    </a>
+                </div>
+                <a href="#apropos" class="scroll-down" aria-label="Défiler">
+                    <span>Défiler</span>
+                    <i></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== BANDEAU DÉFILANT ===== -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>HTML5</span><b>✦</b><span>CSS3</span><b>✦</b><span>JavaScript</span><b>✦</b><span>Python</span><b>✦</b><span>SQL</span><b>✦</b><span>Responsive Design</span><b>✦</b><span>Intelligence Artificielle</span><b>✦</b><span>UI / UX</span><b>✦</b>
+                <span>HTML5</span><b>✦</b><span>CSS3</span><b>✦</b><span>JavaScript</span><b>✦</b><span>Python</span><b>✦</b><span>SQL</span><b>✦</b><span>Responsive Design</span><b>✦</b><span>Intelligence Artificielle</span><b>✦</b><span>UI / UX</span><b>✦</b>
+            </div>
+        </div>
+
+        <!-- ===== À PROPOS (BENTO) ===== -->
+        <section class="section" id="apropos">
+            <div class="wrap">
+                <header class="sec-head">
+                    <span class="sec-index reveal">( 01 )</span>
+                    <h2 class="sec-title reveal">Un mélange de <em>rigueur</em><br>et de <em>créativité</em>.</h2>
+                </header>
+
+                <div class="bento">
+                    <article class="card card-intro spot reveal">
+                        <span class="card-tag">À propos</span>
+                        <p class="big-text">
+                            Je suis <strong>Lydie Grâce</strong>, étudiante en informatique passionnée par le
+                            développement web et l'intelligence artificielle. J'aime transformer une idée en
+                            application concrète — de l'interface jusqu'à la logique qui la fait vivre.
+                        </p>
+                        <a href="#contact" class="link-underline">Travaillons ensemble →</a>
+                    </article>
+
+                    <article class="card card-stat spot reveal">
+                        <span class="card-tag">Projets</span>
+                        <div class="stat-num"><span data-count="2">0</span><sup>+</sup></div>
+                        <p>applications réalisées de A à Z</p>
+                    </article>
+
+                    <article class="card card-now spot reveal">
+                        <span class="card-tag">En ce moment</span>
+                        <ul class="now-list">
+                            <li><span class="now-dot"></span>Approfondir JavaScript</li>
+                            <li><span class="now-dot"></span>Explorer le Machine Learning</li>
+                            <li><span class="now-dot"></span>Rechercher un stage</li>
+                        </ul>
+                    </article>
+
+                    <article class="card card-orbit spot reveal">
+                        <div class="orbit" aria-hidden="true">
+                            <div class="orbit-ring r1"><span>&lt;/&gt;</span></div>
+                            <div class="orbit-ring r2"><span>AI</span></div>
+                            <div class="orbit-ring r3"><span>{ }</span></div>
+                            <div class="orbit-core">✦</div>
+                        </div>
+                        <p class="orbit-caption">Web <em>×</em> Intelligence Artificielle</p>
+                    </article>
+
+                    <article class="card card-stat card-accent spot reveal">
+                        <span class="card-tag">Motivation</span>
+                        <div class="stat-num"><span data-count="100">0</span><sup>%</sup></div>
+                        <p>curieuse, motivée et prête à apprendre</p>
+                    </article>
+
+                    <article class="card card-values spot reveal">
+                        <span class="card-tag">Qualités</span>
+                        <div class="chips">
+                            <span>Esprit d'équipe</span><span>Autonomie</span><span>Rigueur</span>
+                            <span>Curiosité</span><span>Créativité</span><span>Persévérance</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERTISE ===== -->
+        <section class="section section-dark" id="expertise">
+            <div class="wrap">
+                <header class="sec-head sec-head-row">
+                    <div>
+                        <span class="sec-index reveal">( 02 )</span>
+                        <h2 class="sec-title reveal">Ce que je <em>fais</em>.</h2>
+                    </div>
+                    <p class="sec-sub reveal">Des compétences que je développe au quotidien, à travers mes cours et mes projets personnels.</p>
+                </header>
+
+                <div class="services">
+                    <article class="service reveal" data-cursor="✦">
+                        <span class="service-num">01</span>
+                        <h3>Développement <em>Front&#8209;end</em></h3>
+                        <p>Interfaces web responsives, accessibles et agréables, pensées pour l'utilisateur.</p>
+                        <div class="service-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                        <span class="service-arrow">↗</span>
+                    </article>
+                    <article class="service reveal" data-cursor="✦">
+                        <span class="service-num">02</span>
+                        <h3>Back-end & <em>Données</em></h3>
+                        <p>Logique applicative et bases de données pour des applications fiables et fonctionnelles.</p>
+                        <div class="service-tags"><span>SQL</span><span>Bases de données</span><span>Logique métier</span></div>
+                        <span class="service-arrow">↗</span>
+                    </article>
+                    <article class="service reveal" data-cursor="✦">
+                        <span class="service-num">03</span>
+                        <h3>Intelligence <em>Artificielle</em></h3>
+                        <p>Découverte des modèles d'IA et de leurs applications concrètes dans les produits de demain.</p>
+                        <div class="service-tags"><span>Python</span><span>Machine Learning</span><span>Data</span></div>
+                        <span class="service-arrow">↗</span>
+                    </article>
+                    <article class="service reveal" data-cursor="✦">
+                        <span class="service-num">04</span>
+                        <h3>UI <em>Design</em></h3>
+                        <p>Mises en page soignées, hiérarchie claire et souci du détail dans chaque écran.</p>
+                        <div class="service-tags"><span>Maquettes</span><span>Typographie</span><span>Couleurs</span></div>
+                        <span class="service-arrow">↗</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJETS ===== -->
+        <section class="section" id="projets">
+            <div class="wrap">
+                <header class="sec-head sec-head-row">
+                    <div>
+                        <span class="sec-index reveal">( 03 )</span>
+                        <h2 class="sec-title reveal">Projets <em>sélectionnés</em>.</h2>
+                    </div>
+                    <p class="sec-sub reveal">Des applications construites pour répondre à de vrais besoins, du premier croquis au code final.</p>
+                </header>
+
+                <div class="projects">
+                    <!-- Projet 1 -->
+                    <article class="project reveal">
+                        <a href="https://github.com/konanrilydiegrace-jpg" target="_blank" rel="noopener" class="project-visual pv-1 tilt" data-cursor="Voir le code">
+                            <div class="screen">
+                                <div class="screen-bar"><i></i><i></i><i></i><span>bulletins.app</span></div>
+                                <div class="app app-grades">
+                                    <aside class="app-side">
+                                        <b class="app-logo">📘</b>
+                                        <span class="on"></span><span></span><span></span><span></span>
+                                    </aside>
+                                    <div class="app-main">
+                                        <div class="app-head">
+                                            <div><small>Classe de 3ème A</small><strong>Bulletin — Trimestre 1</strong></div>
+                                            <span class="app-btn">Générer PDF</span>
+                                        </div>
+                                        <div class="app-kpis">
+                                            <div><small>Moyenne</small><strong>14,2</strong></div>
+                                            <div><small>Élèves</small><strong>32</strong></div>
+                                            <div><small>Réussite</small><strong>87%</strong></div>
+                                        </div>
+                                        <table class="app-table">
+                                            <tr><th>Élève</th><th>Maths</th><th>Fr.</th><th>Moy.</th></tr>
+                                            <tr><td>A. Koné</td><td>15</td><td>13</td><td><em>14,0</em></td></tr>
+                                            <tr><td>M. Traoré</td><td>17</td><td>16</td><td><em>16,5</em></td></tr>
+                                            <tr><td>S. Yao</td><td>12</td><td>14</td><td><em>13,0</em></td></tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="project-info">
+                            <div class="project-meta"><span>01</span><span>Application de gestion</span></div>
+                            <h3>Bulletins <em>scolaires</em></h3>
+                            <p>Application de saisie des notes et de génération des bulletins : enregistrement des élèves, calcul automatique des moyennes et édition des résultats.</p>
+                            <div class="project-tags"><span>Saisie de notes</span><span>Calcul de moyennes</span><span>Base de données</span></div>
+                            <div class="project-links">
+                                <a href="https://github.com/konanrilydiegrace-jpg" target="_blank" rel="noopener" class="btn btn-outline magnetic">Voir le code <span>↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projet 2 -->
+                    <article class="project project-rev reveal">
+                        <a href="https://github.com/konanrilydiegrace-jpg" target="_blank" rel="noopener" class="project-visual pv-2 tilt" data-cursor="Voir le code">
+                            <div class="screen">
+                                <div class="screen-bar"><i></i><i></i><i></i><span>cereales-shop.app</span></div>
+                                <div class="app app-shop">
+                                    <div class="shop-nav">
+                                        <b>🌾 Céréa<em>Shop</em></b>
+                                        <span class="shop-cart">Panier <i>3</i></span>
+                                    </div>
+                                    <div class="shop-banner">
+                                        <div><small>Récolte 2026</small><strong>Céréales fraîches,<br>direct producteur</strong></div>
+                                        <span class="shop-bubble">-20%</span>
+                                    </div>
+                                    <div class="shop-grid">
+                                        <div class="prod"><span class="prod-img p1">🌽</span><small>Maïs</small><strong>2 500 F</strong></div>
+                                        <div class="prod"><span class="prod-img p2">🌾</span><small>Riz</small><strong>4 000 F</strong></div>
+                                        <div class="prod"><span class="prod-img p3">🫘</span><small>Mil</small><strong>3 200 F</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="project-info">
+                            <div class="project-meta"><span>02</span><span>E-commerce</span></div>
+                            <h3>Vente de <em>céréales</em></h3>
+                            <p>Application de vente de céréales en ligne : catalogue de produits, gestion du panier et suivi des commandes pour rapprocher vendeurs et acheteurs.</p>
+                            <div class="project-tags"><span>Catalogue</span><span>Panier</span><span>Commandes</span></div>
+                            <div class="project-links">
+                                <a href="https://github.com/konanrilydiegrace-jpg" target="_blank" rel="noopener" class="btn btn-outline magnetic">Voir le code <span>↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="next-project reveal">
+                    <span class="np-label">Bientôt</span>
+                    <p>De nouveaux projets autour de l'<em>intelligence artificielle</em> sont en préparation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MÉTHODE ===== -->
+        <section class="section section-dark" id="methode">
+            <div class="wrap">
+                <header class="sec-head">
+                    <span class="sec-index reveal">( 04 )</span>
+                    <h2 class="sec-title reveal">Ma façon de <em>travailler</em>.</h2>
+                </header>
+
+                <ol class="steps">
+                    <li class="step reveal">
+                        <span class="step-num">01</span>
+                        <h3>Comprendre</h3>
+                        <p>J'écoute le besoin, j'analyse le problème et je définis clairement les objectifs.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">02</span>
+                        <h3>Concevoir</h3>
+                        <p>Je structure l'application et imagine une interface simple et intuitive.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">03</span>
+                        <h3>Développer</h3>
+                        <p>J'écris un code propre et organisé, en testant chaque fonctionnalité.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">04</span>
+                        <h3>Améliorer</h3>
+                        <p>Je recueille les retours et j'améliore le résultat en continu.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section contact" id="contact">
+            <div class="contact-glow" aria-hidden="true"></div>
+            <div class="wrap">
+                <header class="contact-head">
+                    <div>
+                        <span class="sec-index reveal">( 05 )</span>
+                        <h2 class="contact-title reveal">
+                            Un projet, une question<br>ou un <em>stage</em>&nbsp;?
+                        </h2>
+                    </div>
+                    <p class="contact-lead reveal">
+                        Remplissez le formulaire : votre message arrive directement dans ma boîte mail.
+                        Je vous réponds dans les plus brefs délais.
+                    </p>
+                </header>
+
+                <div class="contact-grid">
+                    <!-- Coordonnées -->
+                    <aside class="contact-info reveal">
+                        <div class="info-card info-main spot">
+                            <span class="info-label">Email</span>
+                            <a href="mailto:konanrilydiegrace@gmail.com" class="info-mail" data-cursor="Écrire">konanrilydiegrace<wbr>@gmail.com</a>
+                            <button type="button" class="copy-btn" id="copy-email" data-email="konanrilydiegrace@gmail.com">
+                                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                                <span>Copier l'adresse</span>
+                            </button>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-card spot">
+                                <span class="info-label">Statut</span>
+                                <p class="info-value"><span class="pulse"></span> Disponible</p>
+                                <small>pour un stage</small>
+                            </div>
+                            <div class="info-card spot">
+                                <span class="info-label">Réponse</span>
+                                <p class="info-value">Rapide</p>
+                                <small>par email</small>
+                            </div>
+                        </div>
+
+                        <div class="info-card spot">
+                            <span class="info-label">Retrouvez-moi</span>
+                            <div class="info-links">
+                                <a href="https://www.linkedin.com/in/lydie-gr%C3%A2ce-konanri-ab90823a2/" target="_blank" rel="noopener" class="info-link">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>
+                                    LinkedIn <span class="arr">↗</span>
+                                </a>
+                                <a href="https://github.com/konanrilydiegrace-jpg" target="_blank" rel="noopener" class="info-link">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+                                    GitHub <span class="arr">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Formulaire -->
+                    <div class="form-shell reveal">
+                        <form class="form" id="contact-form" action="https://formsubmit.co/konanrilydiegrace@gmail.com" method="POST" novalidate>
+                            <!-- Réglages FormSubmit -->
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                            <div class="form-head">
+                                <h3>Envoyer un message</h3>
+                                <span class="form-step">Les champs * sont obligatoires</span>
+                            </div>
+
+                            <div class="field-chips" role="radiogroup" aria-label="Sujet du message">
+                                <label><input type="radio" name="sujet" value="Proposition de stage" checked><span>🎓 Stage</span></label>
+                                <label><input type="radio" name="sujet" value="Projet / collaboration"><span>🚀 Projet</span></label>
+                                <label><input type="radio" name="sujet" value="Question"><span>💬 Question</span></label>
+                                <label><input type="radio" name="sujet" value="Autre"><span>✦ Autre</span></label>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <input type="text" id="f-name" name="nom" placeholder=" " required autocomplete="name" maxlength="80">
+                                    <label for="f-name">Nom complet *</label>
+                                    <small class="field-error" id="err-nom"></small>
+                                </div>
+                                <div class="field">
+                                    <input type="email" id="f-email" name="email" placeholder=" " required autocomplete="email" maxlength="120">
+                                    <label for="f-email">Adresse email *</label>
+                                    <small class="field-error" id="err-email"></small>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <input type="text" id="f-org" name="organisation" placeholder=" " autocomplete="organization" maxlength="100">
+                                <label for="f-org">Entreprise / organisation (facultatif)</label>
+                            </div>
+
+                            <div class="field">
+                                <textarea id="f-msg" name="message" rows="5" placeholder=" " required maxlength="1500"></textarea>
+                                <label for="f-msg">Votre message *</label>
+                                <div class="field-foot">
+                                    <small class="field-error" id="err-message"></small>
+                                    <small class="counter"><span id="msg-count">0</span> / 1500</small>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-accent btn-block submit-btn" id="submit-btn">
+                                <span class="submit-text">Envoyer le message</span>
+                                <span class="btn-arrow">
+                                    <svg class="ic-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                                    <span class="spinner"></span>
+                                </span>
+                            </button>
+
+                            <p class="form-note">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                                Vos informations servent uniquement à vous répondre.
+                            </p>
+                            <p class="form-alert" id="form-alert" role="alert" hidden></p>
+                        </form>
+
+                        <!-- Message de confirmation -->
+                        <div class="form-success" id="form-success" hidden tabindex="-1">
+                            <div class="success-icon">
+                                <svg viewBox="0 0 52 52" width="52" height="52"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 27l7 7 15-16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <h3>Message <em>envoyé</em> !</h3>
+                            <p>Merci <strong id="success-name"></strong>, votre message est bien arrivé. Je vous réponds très vite à l'adresse indiquée.</p>
+                            <button type="button" class="btn btn-outline" id="send-another">Envoyer un autre message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer class="footer">
+        <div class="wrap">
+            <!-- Appel à l'action -->
+            <div class="footer-cta">
+                <div>
+                    <span class="footer-status"><span class="pulse"></span> Disponible pour un stage</span>
+                    <h2 class="footer-title">Construisons quelque chose<br>de <em>remarquable</em> ensemble.</h2>
+                </div>
+                <a href="#contact" class="footer-circle magnetic" data-cursor="Écrire">
+                    <span>Me contacter</span>
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                </a>
+            </div>
+
+            <!-- Colonnes -->
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#accueil" class="logo">
+                        <span class="logo-mark">L<em>g</em></span>
+                        <span class="logo-txt">Lydie Grâce KONANRI<small>Développeuse Web & IA</small></span>
+                    </a>
+                    <p>Étudiante en informatique, je conçois des applications web utiles et soignées, avec un intérêt fort pour l'intelligence artificielle.</p>
+                </div>
+
+                <nav class="footer-col" aria-label="Liens du pied de page">
+                    <h3>Navigation</h3>
+                    <a href="#apropos">À propos</a>
+                    <a href="#expertise">Expertise</a>
+                    <a href="#projets">Projets</a>
+                    <a href="#methode">Méthode</a>
+                </nav>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <a href="mailto:konanrilydiegrace@gmail.com">konanrilydiegrace<wbr>@gmail.com</a>
+                    <a href="#contact">Formulaire de contact</a>
+                    <span class="footer-muted">Réponse rapide garantie</span>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Réseaux</h3>
+                    <a href="https://www.linkedin.com/in/lydie-gr%C3%A2ce-konanri-ab90823a2/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+                    <a href="https://github.com/konanrilydiegrace-jpg" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+                    <a href="mailto:konanrilydiegrace@gmail.com">Email <span>↗</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nom géant -->
+        <div class="footer-word" aria-hidden="true">
+            <span>Lydie</span><em>Grâce</em>
+        </div>
+
+        <!-- Barre du bas -->
+        <div class="wrap">
+            <div class="footer-bottom">
+                <span>&copy; <span id="year">2026</span> Lydie Grâce KONANRI — Tous droits réservés</span>
+                <span class="footer-clock">Heure locale · <span id="clock">--:--</span></span>
+                <a href="#accueil" class="to-top" data-cursor="Haut">
+                    Haut de page
+                    <span class="to-top-icon">↑</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
