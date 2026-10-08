@@ -2,7 +2,7 @@
 
 Portfolio personnel d'une étudiante en informatique, passionnée par le développement web et l'intelligence artificielle.
 
-🔗 **Site en ligne :** https://konanrilydiegrace-jpg.github.io
+🔗 **Site en ligne :** https://konanrilydiegrace-jpg.github.io/Mon-portfolio/
 
 ## Contenu
 
