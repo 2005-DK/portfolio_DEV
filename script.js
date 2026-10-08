@@ -281,6 +281,14 @@ form.addEventListener('submit', async e => {
     // Robot détecté (champ caché rempli) : on fait semblant que tout va bien
     if (form.elements._honey.value) { showSuccess(); return; }
 
+    // Page ouverte en local (double-clic sur le fichier) : FormSubmit refuse l'envoi
+    if (location.protocol === 'file:') {
+        formAlert.innerHTML = `Le formulaire fonctionne uniquement sur le site en ligne.
+            En attendant, <a href="${mailtoLink()}">envoyez le message depuis votre messagerie</a>.`;
+        formAlert.hidden = false;
+        return;
+    }
+
     const data = new FormData(form);
     data.append('_subject', `Portfolio — ${data.get('sujet')} — ${data.get('nom')}`);
     data.append('_replyto', data.get('email'));
@@ -298,8 +306,12 @@ form.addEventListener('submit', async e => {
         if (!res.ok || String(json.success) !== 'true') throw new Error(json.message || 'Erreur');
         showSuccess();
     } catch (err) {
-        formAlert.innerHTML = `L'envoi n'a pas pu aboutir. Vérifiez votre connexion ou
-            <a href="${mailtoLink()}">envoyez-le depuis votre messagerie</a>.`;
+        const reason = /activ/i.test(err.message)
+            ? 'Le formulaire est en cours d\'activation.'
+            : 'L\'envoi n\'a pas pu aboutir.';
+        formAlert.innerHTML = `${reason} Vous pouvez
+            <a href="${mailtoLink()}">envoyer le message depuis votre messagerie</a>.`;
+        console.warn('FormSubmit :', err.message);
         formAlert.hidden = false;
     } finally {
         submitBtn.classList.remove('loading');
